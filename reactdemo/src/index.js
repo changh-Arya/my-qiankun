@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import "antd/dist/antd.css"
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "antd/dist/antd.css";
+import actions from "./qiankun/action";
 
 if (window.__POWERED_BY_QIANKUN__) {
   // 动态设置 webpack publicPath，防止资源加载出错
@@ -35,6 +36,7 @@ export async function bootstrap() {
  */
 export async function mount(props) {
   console.log("ReactApp mount", props);
+  actions.setActions(props);
   render(props);
 }
 
@@ -45,4 +47,3 @@ export async function unmount() {
   console.log("ReactApp unmount");
   ReactDOM.unmountComponentAtNode(document.getElementById("root"));
 }
-

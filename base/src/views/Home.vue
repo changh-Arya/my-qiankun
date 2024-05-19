@@ -6,6 +6,12 @@
 </template>
 
 <script>
+import {initGlobalState} from 'qiankun'
+const actions = initGlobalState({username:"Arya"})
+actions.onGlobalStateChange((state,prev)=> {
+  console.log("新值：",state);
+  console.log("旧值：",prev)
+},true)
 export default {
   name: 'Home'
 }

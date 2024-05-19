@@ -1,0 +1,28 @@
+/* Message.css */
+
+.message-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 9999;
+    /* 确保消息在顶部显示 */
+}
+
+.message-content {
+    color: #333;
+    font-size: 16px;
+}
+
+.message-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #999;
+}

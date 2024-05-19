@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name":"UmiApp",
+  "name": "UmiApp",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
